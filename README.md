@@ -17,7 +17,7 @@ npm ci
 
 ## Requirements
 
-Node.js 20.19+ or 22.12+ and npm. The project was set up with Node.js 24 and npm 11.
+Node.js 20.19+, 22.13+, or 24+ and npm. ESLint 10 requires one of those Node release lines. GitHub Actions pins the Node.js 22 runtime to 22.23.4, which meets ESLint's 22.13+ requirement. The local setup was validated with Node.js 24 and npm 11.
 
 ## Run locally
 
@@ -31,9 +31,14 @@ Vite prints the local URL after startup.
 ## Build
 
 ```sh
+npm run lint
+npm run audit
+npm test
 npm run build
 npm run preview
 ```
+
+`npm run audit` checks the committed dependency lockfile and fails CI for high or critical advisories. See [docs/SECURITY.md](docs/SECURITY.md) for review and remediation guidance.
 
 ## Project structure
 

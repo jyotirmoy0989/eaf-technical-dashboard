@@ -1,4 +1,4 @@
-import { Activity, Award, Droplets, Factory, Flame, Layers, Shield, Wind, Zap } from 'lucide-react';
+import { Droplets, Flame, Layers, Shield, Wind, Zap } from 'lucide-react';
 
 export const ANATOMY_COMPONENTS = [
   {

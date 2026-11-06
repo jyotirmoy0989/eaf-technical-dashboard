@@ -6,26 +6,18 @@ import {
   Zap,
   Thermometer,
   Clock,
-  Shield,
-  Sliders,
   Play,
   Pause,
   RotateCcw,
   ChevronRight,
   ChevronLeft,
-  Info,
   CheckCircle2,
-  AlertTriangle,
   Layers,
   Activity,
   Award,
   BarChart3,
   Factory,
   Sparkles,
-  Droplets,
-  Wind,
-  Wrench,
-  ArrowUpRight
 } from 'lucide-react';
 
 // ==========================================
@@ -1159,7 +1151,6 @@ export default function App() {
                 {/* All 6 Component Directory List for Rapid Switching */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {ANATOMY_COMPONENTS.map((comp, index) => {
-                    const Icon = comp.icon;
                     const active = selectedAnatomyId === comp.id;
                     return (
                       <button

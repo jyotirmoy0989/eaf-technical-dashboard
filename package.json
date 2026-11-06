@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "audit": "npm audit --audit-level=high",
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "preview": "vite preview"
@@ -15,13 +17,18 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "10.0.1",
     "@tailwindcss/vite": "^4.3.4",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "10.14.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.14.0",
     "tailwindcss": "^4.3.4",
     "typescript": "~5.7.2",
+    "typescript-eslint": "8.72.1",
     "vite": "^6.0.5",
-    "vitest": "^2.1.8"
+    "vitest": "^4.1.12"
   }
 }
