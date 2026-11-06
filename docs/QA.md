@@ -6,6 +6,7 @@
 - `npm run test` runs Vitest calculation unit tests.
 - `npm run lint` runs ESLint over `.js`, `.jsx`, `.ts`, and `.tsx` files, excluding dependencies, build output, Vite cache, coverage, and `reference/`.
 - `npm run audit` runs `npm audit --audit-level=high`; it reports lower severities and fails for high/critical findings.
+- GitHub CodeQL runs JavaScript/TypeScript static security analysis on pushes and pull requests to `main`, weekly, and on manual dispatch. Results require a completed GitHub Actions run; see [SECURITY.md](SECURITY.md).
 
 ## Results for the ESLint/security phase
 
