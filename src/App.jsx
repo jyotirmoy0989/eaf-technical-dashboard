@@ -11,28 +11,18 @@ import {
   RotateCcw,
   ChevronRight,
   ChevronLeft,
-  Info,
   CheckCircle2,
-  AlertTriangle,
   Layers,
   Activity,
   Award,
   BarChart3,
-  Factory,
   Sparkles,
   Droplets,
   Wind,
-  Wrench,
-  Gauge,
   Cpu,
-  TrendingDown,
   Scale,
-  BatteryCharging,
-  HelpCircle,
-  BookOpen,
   Check,
   X,
-  RefreshCw,
   ArrowRight
 } from 'lucide-react';
 
@@ -1434,7 +1424,6 @@ export default function App() {
   const foamingSlagSavedKwh = foamingSlagEnabled ? 15 : 0; // 2-3% of total energy (~15 kWh/t)
   const hotDriSavedKwh = Math.round((hotDriPct / 50) * 150); // 50% Hot DRI @ 600°C saves 150 kWh/t
   const tempDisciplineSavedKwh = avoidTempOvershoot ? 12.5 : 0; // Avoiding +60°C overshoot saves 12.5 kWh/t
-  const coherentJetMinutesSaved = coherentJetMode === 'lancing' ? 4.5 : 0; // 3-6 min saved
   const electrodeConsumptionKgT = electrodeBestPractice ? 1.2 : 2.4;
   const totalBestPracticeKwhSaved = +(
     foamingSlagSavedKwh +
