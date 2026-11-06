@@ -38,7 +38,7 @@ npm run build
 npm run preview
 ```
 
-`npm run audit` checks the committed dependency lockfile and fails CI for high or critical advisories. See [docs/SECURITY.md](docs/SECURITY.md) for review and remediation guidance.
+`npm run audit` checks the committed dependency lockfile and fails CI for high or critical advisories. GitHub CodeQL also scans JavaScript and TypeScript source for security issues. See [docs/SECURITY.md](docs/SECURITY.md) for review and remediation guidance.
 
 ## Project structure
 
@@ -51,7 +51,7 @@ src/data/           Reference dashboard data from the earlier implementation
 src/utils/          Reusable calculation utility
 src/__tests__/      Calculation unit tests
 docs/               Project and content documentation
-.github/workflows/  GitHub Actions CI
+.github/workflows/  GitHub Actions CI and CodeQL
 ```
 
 This is a frontend-only demonstration. Telemetry is simulated and is not connected to a plant.

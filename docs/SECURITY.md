@@ -1,4 +1,18 @@
-# Dependency security
+# Security
+
+## CodeQL static analysis
+
+Static application security testing (SAST) analyzes application source code for security weaknesses without running the application. GitHub CodeQL builds a representation of the code and runs security queries to identify potentially vulnerable patterns and data flows. This is software security analysis; it does not validate steelmaking engineering data or calculations.
+
+The dedicated CodeQL workflow analyzes JavaScript and TypeScript using GitHub's default query suite and no build. Default source discovery is intended to cover `src/App.jsx`, `src/App.tsx`, other TypeScript source under `src/`, and supporting JavaScript and TypeScript configuration files. Check the analysis logs to confirm actual coverage; no paths are manually excluded.
+
+The workflow runs on pushes to `main`, pull requests targeting `main`, weekly on Monday at 04:23 UTC, and manual `workflow_dispatch` runs. Findings uploaded by a completed analysis appear under the repository's **Security → Code scanning** page, with pull request annotations where applicable.
+
+To investigate an alert, review its severity, affected file and lines, query description, and any data-flow path. Determine whether the reported behavior is reachable and relevant, then fix the underlying issue and add a focused test where useful. Review the next CodeQL run to confirm the alert is resolved. If an alert is not actionable, document the rationale and use GitHub's alert dismissal controls as appropriate.
+
+CodeQL examines source for security weaknesses. `npm audit` checks the dependency lockfile against known package advisories; the two checks complement each other and neither replaces the other.
+
+## Dependency security
 
 The project runs `npm audit` against the complete lockfile, including development dependencies. Run `npm run audit`; npm reports all severities, and the script exits unsuccessfully for high or critical advisories. GitHub Actions runs the same command after `npm ci`.
 
